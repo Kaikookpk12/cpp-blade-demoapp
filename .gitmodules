@@ -1,0 +1,6 @@
+[submodule "libraries/garydu"]
+	path = libraries/garydu
+	url = git@github.com:Dubiy/demolib.cpp.git
+[submodule "vcpkg"]
+	path = vcpkg
+	url = git@github.com:microsoft/vcpkg.git
