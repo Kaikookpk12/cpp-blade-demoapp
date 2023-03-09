@@ -4,3 +4,6 @@
 [submodule "vcpkg"]
 	path = vcpkg
 	url = git@github.com:microsoft/vcpkg.git
+[submodule "libraries/blade-cpp"]
+	path = libraries/blade-cpp
+	url = git@github.com:Blade-Labs/cpp-blade.git
