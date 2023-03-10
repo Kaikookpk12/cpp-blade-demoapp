@@ -6,6 +6,16 @@ As Blade-cpp SDK using https://github.com/hashgraph/hedera-sdk-cpp, which still 
 
 Cureently, please use ED25519 keys only
 
+## Methods used in main.cpp
+
+- BladeSDK::init
+- BladeSDK::createAccount
+- BladeSDK::importAccount
+- BladeSDK::transferHbars
+- BladeSDK::transferTokens
+- BladeSDK::signMessage
+- BladeSDK::verifyMessage
+
 ## Commands to build locally (linux example)
 
 ```
