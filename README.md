@@ -9,6 +9,7 @@ Cureently, please use ED25519 keys only
 ## Commands to build locally (linux example)
 
 ```
+sudo apt-get install libgtest-dev
 git submodule update --init
 cmake --preset linux-x64-debug
 cmake --build --preset linux-x64-debug 
