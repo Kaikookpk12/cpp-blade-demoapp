@@ -17,7 +17,6 @@ target_sources(${PROJECT_NAME}
         main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE garydu)
 target_link_libraries(${PROJECT_NAME} PRIVATE blade-cpp)
 
 set(Boost_USE_STATIC_LIBS ON)
