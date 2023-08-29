@@ -7,3 +7,4 @@
 [submodule "libraries/blade-cpp"]
 	path = libraries/blade-cpp
 	url = git@github.com:Blade-Labs/cpp-blade.git
+	branch = dev
