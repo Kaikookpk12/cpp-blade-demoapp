@@ -18,7 +18,16 @@ target_sources(${PROJECT_NAME}
         main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE garydu)
+# target_link_libraries(${PROJECT_NAME} PRIVATE garydu)
+
+# if (APPLE)
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE garydu    
+    "-framework CoreFoundation"
+    "-framework IOKit"   
+)
+# endif ()
+
 
 install(TARGETS ${PROJECT_NAME} 
     ARCHIVE DESTINATION lib
