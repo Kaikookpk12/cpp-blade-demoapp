@@ -34,11 +34,19 @@ find_package(nlohmann_json REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE hedera-sdk-cpp)
-# target_link_libraries(${PROJECT_NAME} PRIVATE ${OPENSSL_LIBRARIES})
-# target_link_libraries(${PROJECT_NAME} PRIVATE ${OPENSSL_ROOT}/lib)
-# target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
-# target_link_libraries(${PROJECT_NAME} PRIVATE dl)
+# target_link_libraries(${PROJECT_NAME} PRIVATE hedera-sdk-cpp)
+# target_link_libraries(${PROJECT_NAME} PRIVATE hapi)
+# target_link_libraries(${PROJECT_NAME} PRIVATE crypto)
+# target_link_libraries(${PROJECT_NAME} PRIVATE ssl)
+
+include_directories(${Boost_INCLUDE_DIRS}/boost)
+include_directories(/Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/include)
+
+
+target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libhedera-sdk-cpp.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libhapi.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libcrypto.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libssl.a)
 
 if (APPLE)
     target_link_libraries(${PROJECT_NAME} PRIVATE ${OSX_CORE_FOUNDATION})
@@ -161,8 +169,7 @@ install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION bin
 )
 
-file(COPY ${hedera-sdk-cpp_SOURCE_DIR}/addressbook/testnet.pb DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})
-file(COPY ${hedera-sdk-cpp_SOURCE_DIR}/addressbook/mainnet.pb DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})
-file(COPY ${hedera-sdk-cpp_SOURCE_DIR}/wordlists/bip39-english.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})
-file(COPY ${hedera-sdk-cpp_SOURCE_DIR}/wordlists/legacy-english.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})
+file(COPY ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/mainnet.pb DESTINATION ${CMAKE_SOURCE_DIR}/package/bin)
+file(COPY ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/previewnet.pb DESTINATION ${CMAKE_SOURCE_DIR}/package/bin)
+file(COPY ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/testnet.pb DESTINATION ${CMAKE_SOURCE_DIR}/package/bin)
 
