@@ -16,7 +16,7 @@ cd package/bin
 ./demo-application
 ```
 
-# Examples couple examples exists in main(), please uncomment and check
+# Examples exists in main(), please uncomment and check
 
 # Execution output example
 
