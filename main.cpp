@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
         std::string privateKeyHex = "3030020100300706052b8104000a04220420ebccecef769bb5597d0009123a0fd96d2cdbe041c2a2da937aaf8bdc8731799b";
         std::string publicKeyHex = "302d300706052b8104000a032200029dc73991b0d9cdbb59b2cd0a97a0eaff6de801726cb39804ea9461df6be2dd30";
         std::string dAppCode = "unitysdktest";
-        std::string apiKey = "Rww3x27z3Q9rrIvRQ6qGgIRppxz5e5HHPWdARyxnMXpe77WD5MW39REBXXvRZsZE";
+        std::string apiKey = "GgsRv5PWfQaRQkykgSDRR3JzXN6kVRwv8RWGIes6SnH2vbSnxWMrf5AAxGbQdYbv";
         BladeSDK::SdkEnvironment sdkEnvironment = BladeSDK::SdkEnvironment::CI;
         BladeSDK::Network network = BladeSDK::Network::Testnet;
 
