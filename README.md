@@ -11,7 +11,7 @@ Cureently, please use ECDSA keys only
 ```
 git submodule update --init
 cmake --preset macos-arm64-release
-cmake --build --preset linux-x64-debug 
+cmake --build --preset macos-arm64-release
 cd package/bin
 ./demo-application
 ```
