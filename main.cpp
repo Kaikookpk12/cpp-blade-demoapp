@@ -20,15 +20,16 @@ int main(int argc, char *argv[]) {
         std::cout << "init: " << blade << std::endl;
         
 
+        // TODO
         // std::cout << "createAccountBlade: " << blade.createAccountBlade() << std::endl;
         
-        std::cout << "getAccountInfo: " << blade.getAccountInfo(accountId) << std::endl;
+        // std::cout << "getAccountInfo: " << blade.getAccountInfo(accountId) << std::endl;
 
         // std::cout << "getBalance: " << blade.getBalance(accountId) << std::endl;
 
         // std::cout << "importAccount: " << blade.importAccount("best soccer little verify love ladder else kick depth mesh silly desert", true) << std::endl; // ECDSA, 0.0.2018696
 
-        // std::cout << "transferHbars: " << blade.transferHbars(accountId, privateKeyHex, accountId2, "15", "cpp-sdk-test") << std::endl;
+        std::cout << "transferHbars: " << blade.transferHbars(accountId, privateKeyHex, accountId2, "15", "cpp-sdk-test") << std::endl;
 
         // std::cout << "transferTokens (paid): " <<  blade.transferTokens(tokenId, accountId, privateKeyHex, accountId2, "1", "cpp-sdk-paid-token-transfer", false) << std::endl;
 
