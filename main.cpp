@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
         // std::cout << "importAccount: " << blade.importAccount("best soccer little verify love ladder else kick depth mesh silly desert", true) << std::endl; // ECDSA, 0.0.2018696
 
-        std::cout << "transferHbars: " << blade.transferHbars(accountId, privateKeyHex, accountId2, "15", "cpp-sdk-test") << std::endl;
+        // std::cout << "transferHbars: " << blade.transferHbars(accountId, privateKeyHex, accountId2, "15", "cpp-sdk-test") << std::endl;
 
         // std::cout << "transferTokens (paid): " <<  blade.transferTokens(tokenId, accountId, privateKeyHex, accountId2, "1", "cpp-sdk-paid-token-transfer", false) << std::endl;
 
@@ -61,11 +61,10 @@ int main(int argc, char *argv[]) {
         // ContractFunctionParameters params = ContractFunctionParameters().addString("cpp-sdk-test [Blade pay]");
         // std::cout << "Contract call: " << blade.contractCallFunction(contractId, "set_message", params, accountId, privateKeyHex, 150000, true) << std::endl;
 
-
-        // WIP
         // contract call query (self pay)
-        // ContractFunctionParameters params = ContractFunctionParameters();
-        // std::cout << "Contract call query: " << blade.contractCallQueryFunction(contractId, "get_message", params, accountId, privateKeyHex, 1500000, {"string", "int32"}) << std::endl;
+        ContractFunctionParameters params = ContractFunctionParameters();
+        ContractFunctionResult res = blade.contractCallQueryFunction(contractId, "get_message", params, accountId, privateKeyHex, 50000, 1.5, {"string", "int32"});
+        std::cout << "Contract call query. string: " << res.getString(0) << ", int32: " << std::to_string(res.getInt32(1)) << std::endl;
 
 
         // delete account
