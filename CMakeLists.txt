@@ -34,19 +34,13 @@ find_package(nlohmann_json REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED)
 
-# target_link_libraries(${PROJECT_NAME} PRIVATE hedera-sdk-cpp)
-# target_link_libraries(${PROJECT_NAME} PRIVATE hapi)
-# target_link_libraries(${PROJECT_NAME} PRIVATE crypto)
-# target_link_libraries(${PROJECT_NAME} PRIVATE ssl)
-
 include_directories(${Boost_INCLUDE_DIRS}/boost)
-include_directories(/Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/include)
+include_directories(${CMAKE_BINARY_DIR}/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/include)
 
-
-target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libhedera-sdk-cpp.a)
-target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libhapi.a)
-target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libcrypto.a)
-target_link_libraries(${PROJECT_NAME} PRIVATE /Users/gary/dev/cpp/cpp-blade-demoapp/build/macos-arm64-release/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libssl.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libhedera-sdk-cpp.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libhapi.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libcrypto.a)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/lib/libssl.a)
 
 if (APPLE)
     target_link_libraries(${PROJECT_NAME} PRIVATE ${OSX_CORE_FOUNDATION})
