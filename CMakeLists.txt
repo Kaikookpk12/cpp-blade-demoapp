@@ -169,7 +169,8 @@ install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION bin
 )
 
-file(COPY ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/mainnet.pb DESTINATION ${CMAKE_SOURCE_DIR}/package/bin)
-file(COPY ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/previewnet.pb DESTINATION ${CMAKE_SOURCE_DIR}/package/bin)
-file(COPY ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/testnet.pb DESTINATION ${CMAKE_SOURCE_DIR}/package/bin)
-
+install(FILES
+        ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/mainnet.pb
+        ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/previewnet.pb
+        ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/testnet.pb
+        DESTINATION bin/addressbook)
