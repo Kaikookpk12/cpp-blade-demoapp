@@ -1,6 +1,12 @@
 #include <iostream>
 #include <BladeSDK.h>
 
+#include "ftxui/component/component.hpp"
+#include "ftxui/component/screen_interactive.hpp"
+#include "ftxui/dom/canvas.hpp"
+#include "ftxui/dom/elements.hpp"
+#include "ftxui/screen/color.hpp"
+
 int main(int argc, char *argv[]) {
     try {
         std::string accountId = "0.0.346533";
@@ -14,10 +20,21 @@ int main(int argc, char *argv[]) {
         BladeSDK::SdkEnvironment sdkEnvironment = BladeSDK::SdkEnvironment::CI;
         BladeSDK::Network network = BladeSDK::Network::Testnet;
 
-        std::cout << "Demo application using BladeSDK" << std::endl;
 
-        BladeSDK::Blade blade = BladeSDK::Blade(apiKey, network, dAppCode, sdkEnvironment);
-        std::cout << "init: " << blade << std::endl;
+
+
+
+
+
+
+
+
+
+
+        // std::cout << "Demo application using BladeSDK" << std::endl;
+
+        // BladeSDK::Blade blade = BladeSDK::Blade(apiKey, network, dAppCode, sdkEnvironment);
+        // std::cout << "init: " << blade << std::endl;
         
 
         // TODO
@@ -62,9 +79,9 @@ int main(int argc, char *argv[]) {
         // std::cout << "Contract call: " << blade.contractCallFunction(contractId, "set_message", params, accountId, privateKeyHex, 150000, true) << std::endl;
 
         // contract call query (self pay)
-        ContractFunctionParameters params = ContractFunctionParameters();
-        ContractFunctionResult res = blade.contractCallQueryFunction(contractId, "get_message", params, accountId, privateKeyHex, 50000, 1.5, {"string", "int32"});
-        std::cout << "Contract call query. string: " << res.getString(0) << ", int32: " << std::to_string(res.getInt32(1)) << std::endl;
+        // ContractFunctionParameters params = ContractFunctionParameters();
+        // ContractFunctionResult res = blade.contractCallQueryFunction(contractId, "get_message", params, accountId, privateKeyHex, 50000, 1.5, {"string", "int32"});
+        // std::cout << "Contract call query. string: " << res.getString(0) << ", int32: " << std::to_string(res.getInt32(1)) << std::endl;
 
 
         // delete account
