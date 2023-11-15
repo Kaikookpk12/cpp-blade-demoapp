@@ -1,5 +1,7 @@
 # Blade-cpp SDK demo app
 
+[<img src="./docs/demo.gif" width="70%">](https://www.youtube.com/watch?v=RIiEelrwWCA "Demo video")
+
 ## Disclaimer
 
 As Blade-cpp SDK using https://github.com/hashgraph/hedera-sdk-cpp, which still in development there are limited functionality now. 

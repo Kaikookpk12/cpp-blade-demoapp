@@ -10,6 +10,7 @@
 
 using namespace ftxui;
 using namespace std::literals;
+using namespace BladeSDK;
 
 std::string statusTitle = "Output:";
 std::string statusText = "[empty]";
@@ -473,9 +474,11 @@ int main(int argc, char *argv[]) {
     refresh_ui.join();
 
 
+
+
     // std::cout << "Other examples" << std::endl;
 
-    // BladeSDK::Blade blade = BladeSDK::Blade(apiKey, network, dAppCode, sdkEnvironment);
+    // Blade blade = Blade(apiKey, network, dAppCode, sdkEnvironment);
     // std::cout << "init: " << blade << std::endl;
     
     // std::cout << "createAccountBlade: " << blade.createAccountBlade() << std::endl;
