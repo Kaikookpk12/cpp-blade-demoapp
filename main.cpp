@@ -209,7 +209,7 @@ int main(int argc, char *argv[]) {
         if (bladePtr) {
             try {
                 std::ostringstream os;  
-                createdAccount = bladePtr->createAccountBlade();
+                createdAccount = bladePtr->createAccount();
                 os << createdAccount;
                 Output(os.str());
             } catch (const std::exception& e) {
@@ -481,7 +481,7 @@ int main(int argc, char *argv[]) {
     // Blade blade = Blade(apiKey, network, dAppCode, sdkEnvironment);
     // std::cout << "init: " << blade << std::endl;
     
-    // std::cout << "createAccountBlade: " << blade.createAccountBlade() << std::endl;
+    // std::cout << "createAccountBlade: " << blade.createAccount() << std::endl;
     
     // std::cout << "getAccountInfo: " << blade.getAccountInfo(accountId) << std::endl;
 
