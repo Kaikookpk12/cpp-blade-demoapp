@@ -26,3 +26,27 @@ App contains three tabs, menu, buttons and inputs.
 Some demodata present to demonstrate some functions quickly. 
 At the bottom of UI there is Output section, with execution time in ms an serialized output.
 Also at the end of main() there are some more examples commented out, please check 
+
+## CMakeLists.txt
+
+Please check how to add cpp-blade sdk
+
+```
+# BLADE-CPP SDK
+add_subdirectory(libraries/blade-cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE blade-cpp)
+
+find_package(gRPC CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE c-ares::cares)
+include_directories(${CMAKE_BINARY_DIR}/_deps/hedera-sdk-cpp-src/${CMAKE_BUILD_TYPE}/${CMAKE_HOST_SYSTEM_NAME}/${CMAKE_HOST_SYSTEM_PROCESSOR}/include)
+
+install(FILES
+        ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/mainnet.pb
+        ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/previewnet.pb
+        ${CMAKE_SOURCE_DIR}/libraries/blade-cpp/assets/testnet.pb
+        DESTINATION bin/addressbook)
+
+# /BLADE-CPP SDK
+```
+
+Also please check `CMakePresets.json` file.
