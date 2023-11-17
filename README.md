@@ -14,6 +14,8 @@ Cureently, please use ECDSA keys only
 ## Commands to build locally (macos example)
 
 ```
+git clone git@github.com:Blade-Labs/cpp-blade-demoapp.git
+cd cpp-blade-demoapp
 git submodule update --init
 cmake --preset macos-arm64-release
 cmake --build --preset macos-arm64-release
