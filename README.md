@@ -7,7 +7,7 @@
 
 ## Disclaimer
 
-As Blade-cpp SDK using https://github.com/hashgraph/hedera-sdk-cpp, which still in development there are limited functionality now. 
+As [cpp-blade SDK](https://github.com/Blade-Labs/cpp-blade) using [hedera-sdk-cpp](https://github.com/hashgraph/hedera-sdk-cpp), which are both still in development, so there are limited functionality now. 
 
 Cureently, please use ECDSA keys only
 
