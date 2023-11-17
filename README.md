@@ -1,6 +1,8 @@
 # Blade-cpp SDK demo app
 
+
 [<img src="./docs/demo.gif" width="70%">](https://www.youtube.com/watch?v=RIiEelrwWCA "Demo video")
+[Demo video](https://www.youtube.com/watch?v=RIiEelrwWCA "Demo video")
 
 ## Disclaimer
 
