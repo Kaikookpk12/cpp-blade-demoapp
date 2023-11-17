@@ -17,6 +17,10 @@ cmake --build --preset macos-arm64-release
 cd package/bin && ./demo-application
 ```
 
+## Build and run in docker container (WIP)
+
+`docker build --build-arg SSH_PRIVATE_KEY="$(cat ~/.ssh/id_ecdsa)" -t blade-demo-image .`
+
 ## main.cpp
 
 In demo app used TerminalUI lib: https://github.com/ArthurSonzogni/FTXUI
